@@ -20,3 +20,4 @@
 
 </br>
 注：2.1形式只支持200个及以下贴吧数量的签到，2.2的形式支持200个以上贴吧(STOKEN必须有效，否则与2.1形式效果相同)，2.3形式用于多账户
+STOKEN获取地址：tieba.baidu.com/f/like/mylike 该网页cookie中可调取STOKEN
