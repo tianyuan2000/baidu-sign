@@ -1,5 +1,6 @@
-import os,time
-from baiduTool import baiduTool
+import os
+import time
+from BaiduTool import BaiduTool
 
 def cookie2dict(cookies):
     res = {}
@@ -71,12 +72,12 @@ def main():
     for x in arr:
         ii += 1
         try:
-            bd = baiduTool(cookie2dict(x))
+            bd = BaiduTool(cookie2dict(x))
             bds.append(bd)
         except Exception as e:
             print(f'第{ii}个账户登录异常,原因({str(e)})，跳过此账户的所有签到')
 
-    if len(bds) == 0:
+    if not bds:
         return
 
     for x in bds:
@@ -95,5 +96,5 @@ def main():
     for x in bds:
         shopLottery(x)
 
-
-__name__ == '__main__' and main()
+if __name__ == '__main__':
+    main()
